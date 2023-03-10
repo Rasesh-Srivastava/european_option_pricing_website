@@ -1,0 +1,63 @@
+{%extends "option_first/base.html"%}
+{%block content%}
+    <h1 style="color:#800000"><u>Option Pricing Calculator</u></h1>
+    <h4><i>Calculate the price of European Options using this website :-</i></h4>
+    (Enter only positive numbers in the following fields)<br><br>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td align="right">Present Stock Price S(0) :</td>
+                <td align="left"><input type="text" name="S"></td>
+            </tr>
+            <tr>
+                <td align="right">Maturity Time T (in years) :</td>
+                <td align="left"><input type="text" name="T"></td>
+            </tr>
+        {% comment %} Maturity Time T (in years) : <input type="text" name="T"><br><br> {% endcomment %}
+        <tr>
+            <td align="right">Strike Price K :</td>
+            <td align="left"><input type="text" name="K"></td>
+        </tr>
+        <tr>
+            <td align="right"> Risk-free interest rate r (in %):</td>
+            <td align="left"><input type="text" name="r"></td>
+        </tr>
+        <tr>
+            <td align="right">Volatility σ :</td>
+            <td align="left"><input type="text" name="sigma"></td>
+        </tr>
+        <tr>
+            <td align="right">Number of Steps n:</td>
+            <td align="left"><input type="text" value = "1000" name="n"></td>
+        </tr>
+    </table><br>
+        {% comment %} Strike Price K : <input type="text" name="K"><br><br>
+        Risk-free interest rate r (in %): <input type="text" name="r"><br><br>
+        Volatility σ : <input type="text" name="sigma"><br><br> {% endcomment %}
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit">Calculate</button>
+    </form>
+    <br>
+    S(0) = {{S}}&nbsp&nbsp&nbspT = {{T}}&nbsp&nbsp&nbspK = {{K}}&nbsp&nbsp&nbspr = {{r}}%&nbsp&nbsp&nbspσ = {{sigma}} <br><br>
+    <h3 style="color:black">1. <u>Using Two-Step Binomial Tree Method</u></h3>
+    {% comment %} <h3>u = {{u}} </h3>
+    <h3>d = {{d}} </h3>
+    <h3>p = {{p}} </h3>
+    <h3>Cuu = {{Cuu}} </h3>
+    <h3>Cdd = {{Cdd}} </h3>
+    <h3>Cud = {{Cud}} </h3> {% endcomment %}
+    <h4>Price of European Call Option = {{C}} </h4>
+    <h4>Price of European Put Option = {{P}} </h4><br>
+    <h3 style="color:black">2. <u>Using n-Step Binomial Tree Method (for sufficiently large n)</u></h3>
+    <h4>n = {{n}}</h4>
+    {% comment %} <h3>u_n = {{u_n}} </h3>
+    <h3>d_n = {{d_n}} </h3>
+    <h3>a = {{a}} </h3>
+    <h3>p_n = {{p_n}} </h3>
+    <h3>p_dash = {{p_dash}} </h3> {% endcomment %}
+    <h4>Price of European Call Option = {{n_C}} </h4>
+    <h4>Price of European Put Option = {{n_P}} </h4><br>
+    <h3 style="color:black">3. <u>Using Black-Scholes Formula</u></h3>
+    <h4>Price of European Call Option = {{bs_C}} </h4>
+    <h4>Price of European Put Option = {{bs_P}} </h4><br>
+{%endblock content%}
