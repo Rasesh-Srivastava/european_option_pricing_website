@@ -1,5 +1,5 @@
-# Website to calculate the price of European Options.
-Created using Django.
+# Website to calculate the price of European Options
+Created using Django
 
 # Steps to run the website:-
 1. Clone this GitHub Repo in your local computer.
