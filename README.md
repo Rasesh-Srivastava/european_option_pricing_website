@@ -1,2 +1,3 @@
-Website to calculate the price of European Options.
-Created using Django.
+# Website to calculate the price of European Options.
+# Created using Django.
+
