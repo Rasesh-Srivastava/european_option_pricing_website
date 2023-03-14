@@ -1,0 +1,67 @@
+{%extends "option_first/base.html"%}
+{% load static %}
+{%block content%}
+<a href="{% url 'twoStep' %}">1. <u>Using Two-Step Binomial Tree Method</u></a>
+<hr style="height:2px;border:none;color:#800000;background-color:#800000;">
+<h3 style="color:black">2. <u>Using n-Step Binomial Tree Method (for sufficiently large n)</u></h3>
+    {% comment %} <h3>u_n = {{u_n}} </h3>
+    <h3>d_n = {{d_n}} </h3>
+    <h3>a = {{a}} </h3>
+    <h3>p_n = {{p_n}} </h3>
+    <h3>p_dash = {{p_dash}} </h3> {% endcomment %}
+    <p style="text-align:left;">
+        (Enter only positive numbers in the following fields)
+        <span style="float:right;","color:black">
+            <b><u>Formulas used for calculating the Option Price using n-Step Binomial Tree Method</u> :</b>
+        </span>
+    </p>
+    <img align = "right" src="{% static 'images/n.jpg' %}" alt="Stocks">
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td align="right">Current Stock Price S(0) :</td>
+                <td align="left"><input type="number" step="any" required="required" name="S" min = "0"></td>
+            </tr>
+            <tr>
+                <td align="right">Maturity Time T (in years) :</td>
+                <td align="left"><input type="number" required="required" step="any" name="T" min = "0"></td>
+            </tr>
+        {% comment %} Maturity Time T (in years) : <input type="text" name="T"><br><br> {% endcomment %}
+        <tr>
+            <td align="right">Strike Price K :</td>
+            <td align="left"><input type="number" step="any" required="required" name="K" min = "0"></td>
+        </tr>
+        <tr>
+            <td align="right"> Risk-free interest rate r (in %):</td>
+            <td align="left"><input type="number" step="any" required="required" name="r" min = "0"></td>
+        </tr>
+        <tr>
+            <td align="right">Volatility σ :</td>
+            <td align="left"><input type="number" step="any" required="required" name="sigma" min = "0"></td>
+        </tr>
+        <tr>
+            <td align="right">Number of Steps n:</td>
+            <td align="left"><input type="number" step="any" required="required" value = "1000" name="n" min = "1"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="center"><button type="submit">Calculate</button></td>
+        </tr>
+    </table><br>
+
+        {% comment %} Strike Price K : <input type="text" name="K"><br><br>
+        Risk-free interest rate r (in %): <input type="text" name="r"><br><br>
+        Volatility σ : <input type="text" name="sigma"><br><br> {% endcomment %}
+        {% comment %} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit">Calculate</button> {% endcomment %}
+    </form>
+    {% comment %} <img align="left" src="https://media.geeksforgeeks.org/wp-content/uploads/20190506164011/logo3.png" alt=""> {% endcomment %}
+    <h5>S(0) = {{S}}&nbsp&nbsp&nbspT = {{T}}&nbsp&nbsp&nbspK = {{K}}&nbsp&nbsp&nbspr = {{r}}%&nbsp&nbsp&nbspσ = {{sigma}}</h5>
+    <hr style="height:2px;border:none;color:#800000;background-color:#800000;">
+    <h4>n = {{n}}</h4>
+    <h4>Price of European Call Option = {{n_C}} </h4>
+    <h4>Price of European Put Option = {{n_P}} </h4>
+    <hr style="height:2px;border:none;color:#800000;background-color:#800000;">
+    <a href="{% url 'black-scholes' %}">3. <u>Using Black-Scholes Formula</u></a><br><br>
+    <button><a href="{% url 'option-home' %}">Go Back To Home Page</a></button><br>
+    {%endblock content%}
