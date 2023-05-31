@@ -9,10 +9,23 @@ Option to calculate the price using:
 -  Black-Scholes Model
 
 ## Steps to run the website:-
-1. Clone this GitHub Repo in your local computer.
-2. Open Terminal. From the root directory of this project, i.e., from the OptionPricing folder, run the command: python manage.py runserver
-3. If there is any error and link for the local server is not generated, then first run the command: python manage.py migrate ,and then, run the command: python          manage.py runserver
-4. Open the link generated in the terminal to view the European Option Pricing Website.
+- Clone this GitHub Repo in your local computer.
+- Open Terminal. From the root directory of this project, i.e., from the OptionPricing folder, run the command:
+
+  ```bash
+  python manage.py runserver
+  ```
+- If there is any error and link for the local server is not generated, then first run the command:
+  
+  ```bash
+  python manage.py migrate
+  ```
+  and then, run the command:
+  
+  ```bash
+  python manage.py runserver
+  ```
+- Open the link generated in the terminal to view the European Option Pricing Website.
 
 ## Screenshots:-
 ![WhatsApp Image 2023-03-30 at 3 55 00 PM](https://user-images.githubusercontent.com/116264587/228808483-cb8679af-17cf-4bf9-9ad4-acae0a24cf2c.jpeg)
