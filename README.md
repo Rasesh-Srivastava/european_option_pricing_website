@@ -1,5 +1,5 @@
 # Website to calculate the price of European Options
-Created using Django
+Created using Django. Option to calculate the price using Two-Step Binomial Tree method or using n-Step Binomial Tree method or using Black-Scholes Model.
 
 # Steps to run the website:-
 1. Clone this GitHub Repo in your local computer.
