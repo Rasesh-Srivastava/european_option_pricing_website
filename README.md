@@ -1,5 +1,5 @@
 # Website to calculate the price of European Options
-Created using Django.
+Built using Django, HTML and CSS.
 
 ## Features
 
@@ -7,6 +7,14 @@ Option to calculate the price using:
 - Two-Step Binomial Tree method
 -  n-Step Binomial Tree method
 -  Black-Scholes Model
+
+## Deployed Website
+
+- [European Options Price Calculator Website Link](https://europeanoptionpricing.onrender.com)\
+  **Note**: Since I have deployed the Website on Render using the Free plan of Render, so the website will work and load slowly.\
+  **Note**: This link will not open the website if the website has exceeded the Free Usage Limitations of Render, since it will get suspended by Render.
+
+  If this link to the deployed website does not work, then please refer to the screenshots below / run the website locally.
 
 ## Steps to run the website:-
 - Clone this GitHub Repo in your local computer.
