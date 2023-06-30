@@ -16,6 +16,15 @@ Option to calculate the price using:
 
   If this link to the deployed website does not work, then please refer to the screenshots below / run the website locally.
 
+## Screenshots:-
+![WhatsApp Image 2023-03-30 at 3 55 00 PM](https://user-images.githubusercontent.com/116264587/228808483-cb8679af-17cf-4bf9-9ad4-acae0a24cf2c.jpeg)
+
+![WhatsApp Image 2023-03-30 at 3 55 24 PM](https://user-images.githubusercontent.com/116264587/228808584-2b22d8dd-cfbb-45ae-a3b2-46a510781a8c.jpeg)
+
+![WhatsApp Image 2023-03-30 at 3 56 23 PM](https://user-images.githubusercontent.com/116264587/228808628-e0471b15-be19-44c7-885f-23c114759d2d.jpeg)
+
+![WhatsApp Image 2023-03-30 at 3 57 04 PM](https://user-images.githubusercontent.com/116264587/228808663-667c1c61-2653-4e9d-844a-81ec2714a931.jpeg)
+
 ## Steps to run the website:-
 - Clone this GitHub Repo in your local computer.
 - Open Terminal. From the root directory of this project, i.e., from the OptionPricing folder, run the command:
@@ -34,15 +43,6 @@ Option to calculate the price using:
   python manage.py runserver
   ```
 - Open the link generated in the terminal to view the European Option Pricing Website.
-
-## Screenshots:-
-![WhatsApp Image 2023-03-30 at 3 55 00 PM](https://user-images.githubusercontent.com/116264587/228808483-cb8679af-17cf-4bf9-9ad4-acae0a24cf2c.jpeg)
-
-![WhatsApp Image 2023-03-30 at 3 55 24 PM](https://user-images.githubusercontent.com/116264587/228808584-2b22d8dd-cfbb-45ae-a3b2-46a510781a8c.jpeg)
-
-![WhatsApp Image 2023-03-30 at 3 56 23 PM](https://user-images.githubusercontent.com/116264587/228808628-e0471b15-be19-44c7-885f-23c114759d2d.jpeg)
-
-![WhatsApp Image 2023-03-30 at 3 57 04 PM](https://user-images.githubusercontent.com/116264587/228808663-667c1c61-2653-4e9d-844a-81ec2714a931.jpeg)
 
 ## Tech Stack
 
